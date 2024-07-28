@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+/* global rules  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* end global rules  */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header {
+  padding: 10px 0px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container ul.links li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+  color: hsl(275, 31%, 33%);
+}
+
+.side-menu-links {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 65%;
+  visibility: visible;
+  transition: 0.3s ease-in;
+}
+.visibilty {
+  visibility: hidden;
+  right: -60%;
+}
+.side-menu ul {
+  list-style: none;
+}
+
+.side-menu-links li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+  color: hsl(275, 31%, 33%);
+  font-size: 20px;
+}
+.side-menu-links li {
+  text-align: center;
+  padding: 15px;
+}
+.side-menu-links img {
+  width: 40px;
+  margin: 10px;
+  align-self: self-end;
+}
+.container .icon {
+  display: none;
+}
+
+.landing-sec {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.landing-sec article {
+  width: 60%;
+}
+
+.landing-sec aside {
+  width: 35%;
+  background-color: #00001a;
+  color: white;
+  padding: 25px;
+}
+
+.image-article img {
+  width: 100%;
+}
+.aside-content .row .row-title h1 {
+  padding: 0px 0px;
+}
+.aside-content .row .row-disc p {
+  padding: 20px 0px;
+}
+
+.aside-content .row {
+  margin-bottom: 25px;
+}
+
+.aside-content .row:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.aside-title h1 {
+  color: #e9ab53;
+  padding: 10px 0px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.text-article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+}
+
+.text-article .title {
+  color: #01011a;
+  width: 40%;
+}
+.text-article .disc {
+  width: 55%;
+}
+
+.text-article .title h1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.text-article .disc p {
+  color: hsl(275, 18%, 26%);
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 500;
+}
+.text-article .disc button {
+  background-color: #f15d51;
+  border: none;
+  outline: none;
+  padding: 15px 45px;
+  border-radius: 5px;
+  margin-top: 30px;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+.sec2-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.sec2-cards .card {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card .image {
+  width: 35%;
+  height: 130px;
+}
+.card .card-disc {
+  width: 45%;
+  flex: 1;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-disc span {
+  color: #f15d51;
+  padding-bottom: 10px;
+  display: block;
+  font-size: 25px;
+  font-weight: 600;
+}
+.card .card-disc h1 {
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.card .card-disc p {
+  color: hsl(275, 18%, 26%);
+  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  header .container ul {
+    display: none;
+  }
+  .container .icon {
+    display: block;
+  }
+  .landing-sec aside {
+    width: 100%;
+  }
+  .landing-sec article {
+    width: 100%;
+  }
+  .text-article .title h1 {
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .sec2-cards .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .card .image {
+    width: 25%;
+    height: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-article .title {
+    width: 100%;
+  }
+  .text-article .disc {
+    width: 100%;
+  }
+  .text-article .title h1 {
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .card .image {
+    width: 25%;
+    height: 100px;
+  }
+}
